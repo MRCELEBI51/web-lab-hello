@@ -53,16 +53,30 @@ function App() {
         {/* Projeler */}
         <section id="projeler">
           <h2>Projelerim</h2>
+          <div className="project-grid">
+            <article className="project-card">
+              <h3>QR Restoran Sistemi</h3>
+              <p>QR kod ile sipariş ve ödeme sistemi.</p>
+              <ul className="skill-tags">
+                <li>JavaScript</li>
+                <li>mongoDB</li>
+              </ul>
+            </article>
 
-          <article>
-            <h3>QR Restoran Sistemi</h3>
-            <p>QR kod ile sipariş ve ödeme sistemi.</p>
-          </article>
-
-          <article>
-            <h3>SkinSafe Kozmetik Ürün Analiz Uygulaması</h3>
+            <article className="project-card">
+              <h3>SkinSafe Kozmetik Ürün Analiz Uygulaması</h3>
             <p>React Native ile geliştirililmiş, kozmetik ürünleri ve kişisel bakım ürünlerini ambalaj veya içerikler fotoğrafı ile analiz eden bir mobil uygulama.</p>
-          </article>
+            <ul className="skill-tags">
+              <li>React Native</li>
+              <li>MongoDB</li>
+              <li>node.js</li>
+            </ul>
+            </article>
+          </div>
+
+          
+
+          
         </section>
 
         {/* İletişim */}
