@@ -41,11 +41,13 @@ function App() {
             Yazılım mühendisliği öğrencisiyim. Web geliştirme ve erişilebilirlik konularıyla ilgileniyorum.
           </p>
 
-          <ul>
+          <ul className="skill-tags" role="list"
+          aria-label="Beceri etiketleri">
             <li>HTML5</li>
             <li>CSS3</li>
             <li>React</li>
           </ul>
+          
         </section>
 
         {/* Projeler */}
