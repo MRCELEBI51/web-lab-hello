@@ -1,3 +1,5 @@
+@import './styles/tokens.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -5,31 +7,49 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg);
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #850101bb;
-  color: white;
-  padding: 1rem;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-xl);
 }
 
 nav ul {
   display: flex;
-  gap: 1rem;
-  list-style: none;
+list-style: none;
+gap: var(--space-md);
+padding: 0;
+margin: 0;
+}
+@media (max-width: 639px) {
+    nav ul {
+    flex-direction: column;
+    align-items: center;
+    }
+
 }
 
+
+
 nav a {
-  color: white;
+  color: var(--color-bg);
   text-decoration: none;
 }
 
 /* Bölümler */
 section {
-  padding: 2rem;
+  padding: var(--space-xl);
 }
 
 /* Skip link */
@@ -37,64 +57,67 @@ section {
   position: absolute;
   top: -100px;
   left: 0;
-  background: #2563EB;
-  color: white;
-  padding: 8px 16px;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--space-sm) var(--space-md);
 }
 
 .skip-link:focus {
   top: 0;
 }
 
-/* Focus göstergesi (SİLME!) */
+/* Focus göstergesi */
 :focus {
-  outline: 2px solid #2563EB;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
 /* Form */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
 input,
 textarea,
 select {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
 }
 
 button {
-  padding: 0.5rem 1rem;
-  background: #1E3A8A;
-  color: white;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary);
+  color: var(--color-bg);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
+  transition: var(--transition-fast);
 }
 
 button:hover {
-  background: #2563EB;
+  background: var(--color-accent);
 }
 
 .error-msg {
-  color: red;
-  font-size: 0.85rem;
+  color: var(--color-error);
+  font-size: var(--text-sm);
 }
 
 /* Footer */
 footer {
-  background: #f1f1f1;
+  background: var(--color-surface);
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: var(--space-md);
+  margin-top: var(--space-xl);
 }
+
+/* Profil foto */
 .profil-foto {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   object-fit: cover;
-  margin-top: 1rem;
+  margin-top: var(--space-md);
 }
