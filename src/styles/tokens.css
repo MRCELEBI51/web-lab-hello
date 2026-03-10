@@ -1,3 +1,4 @@
+@import "tailwindcss";
 :root{
     /*--- Renk Paleti--- */
     --color-primary: #1E3A8A;
